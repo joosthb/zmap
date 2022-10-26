@@ -32,3 +32,4 @@ COPY --from=builder /usr/bin/dumb-init ./
 COPY --from=builder /usr/local/sbin/zmap ./
 
 ENTRYPOINT ["/dumb-init", "/zmap"]
+
