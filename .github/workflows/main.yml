@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.REPOSITORY_VAR }}:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/zmap:latest
