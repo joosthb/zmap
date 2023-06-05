@@ -1,5 +1,5 @@
 # builder image
-FROM alpine:3.16 AS builder
+FROM alpine:3.18 AS builder
 
 ARG ZMAP_COMMIT=main
 ENV ZMAP_COMMIT ${ZMAP_COMMIT}
@@ -22,7 +22,7 @@ RUN wget -q https://github.com/zmap/zmap/archive/refs/heads/${ZMAP_COMMIT}.zip &
 
 # ---------------------------------------------------------
 # create run container
-FROM alpine:3.16
+FROM alpine:3.18
 
 # install necessary libraries
 RUN apk add --no-cache json-c gmp libunistring libpcap
